@@ -6,19 +6,18 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="view.ClienteControlador">
+<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ClienteControlador">
    <children>
       <Label layoutX="96.0" layoutY="81.0" text="nombre" />
       <Label layoutX="96.0" layoutY="260.0" text="CI" />
       <Label layoutX="96.0" layoutY="350.0" text="telefono" />
       <Label layoutX="96.0" layoutY="440.0" text="fecha de nacimineto" />
       <Label layoutX="96.0" layoutY="170.0" text="apellido" />
-      <TextField fx:id="nombre" layoutX="96.0" layoutY="120.0" />
-      <TextField fx:id="apellido" layoutX="96.0" layoutY="211.0" />
-      <TextField fx:id="CI" layoutX="96.0" layoutY="297.0" />
-      <TextField fx:id="telefono" layoutX="96.0" layoutY="393.0" />
-      <DatePicker fx:id="fechaNacimiento" layoutX="84.0" layoutY="480.0" />
+      <TextField fx:id="txtNombre" layoutX="96.0" layoutY="120.0" />
+      <TextField fx:id="txtApellido" layoutX="96.0" layoutY="211.0" />
+      <TextField fx:id="txtCi" layoutX="96.0" layoutY="297.0" />
+      <TextField fx:id="txtTelefono" layoutX="96.0" layoutY="393.0" />
+      <DatePicker fx:id="txtFechaNacimiento" layoutX="84.0" layoutY="480.0" />
       <Button fx:id="ingresar" layoutX="453.0" layoutY="480.0" mnemonicParsing="false" text="ingresar" />
    </children>
 </AnchorPane>

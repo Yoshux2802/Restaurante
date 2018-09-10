@@ -1,5 +1,7 @@
 package entity;
 
+import java.sql.Date;
+
 public class Cliente {
 	
 	private int idCliente;
@@ -7,9 +9,9 @@ public class Cliente {
 	private String apellido;
 	private int ci;
 	private int telefono;
-	private int fechaNaci;
-	public Cliente(int idCliente, String nombre, String apellido, int ci, int telefono, int fechaNaci) {
-		super();
+	private Date fechaNaci;
+	
+	public Cliente(int idCliente, String nombre, String apellido, int ci, int telefono, Date fechaNaci) {
 		this.idCliente = idCliente;
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -47,10 +49,10 @@ public class Cliente {
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
-	public int getFechaNaci() {
+	public Date getFechaNaci() {
 		return fechaNaci;
 	}
-	public void setFechaNaci(int fechaNaci) {
+	public void setFechaNaci(Date fechaNaci) {
 		this.fechaNaci = fechaNaci;
 	}
 	@Override
