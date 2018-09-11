@@ -29,6 +29,30 @@ public class PedidosControlador {
 		}
 	}
 	
+	public void ingresar2 (ActionEvent event) {		
+		Pane pane;
+		try {
+			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmPlato.fxml"));
+			Scene nuevaEscena = new Scene(pane);
+			Stage ventana = (Stage) panel.getScene().getWindow();
+			ventana.setScene(nuevaEscena);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void ingresar (ActionEvent event) {		
+		Pane pane;
+		try {
+			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmProveedor.fxml"));
+			Scene nuevaEscena = new Scene(pane);
+			Stage ventana = (Stage) panel.getScene().getWindow();
+			ventana.setScene(nuevaEscena);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 
 }

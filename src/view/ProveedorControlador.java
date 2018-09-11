@@ -1,22 +1,18 @@
 package view;
 
 import java.io.IOException;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
-import java.time.ZoneId;
 
-import entity.Cliente;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class ClienteControlador {
+public class ProveedorControlador {
+	
 	
 	@FXML
 	private Pane panel;
@@ -25,17 +21,9 @@ public class ClienteControlador {
 	private TextField txtNombre;
 	
 	@FXML
-	private TextField txtApellido;
-	
-	@FXML
-	private TextField txtCi;
-	
-	@FXML
 	private TextField txtTelefono;
 	
-	@FXML
-	private DatePicker txtFechaNacimiento;
-	 
+	
 	public void initialize() {
 		
 	}
@@ -52,12 +40,10 @@ public class ClienteControlador {
 		}
 	}
 	
-	public void newCliente () {
+	public void newProveedor () {
+		
 		String nombre = txtNombre.getText().toString();
-		String apellido = txtApellido.getText().toString();
-		int ci = Integer.parseInt(txtCi.getText().toString());
-		int telefono = Integer.parseInt(txtTelefono.getText().toString());
-		Date fechaNacimiento = new java.sql.Date(Date.from(txtFechaNacimiento.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()).getTime());
+		int telefono = Integer.parseInt(txtTelefono.getText().toString());		
 	}
 	
 }

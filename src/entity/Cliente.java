@@ -19,6 +19,11 @@ public class Cliente {
 		this.telefono = telefono;
 		this.fechaNaci = fechaNaci;
 	}
+	
+	public Cliente(int idCliente) {
+		this.idCliente = idCliente;
+	}
+
 	public int getIdCliente() {
 		return idCliente;
 	}
