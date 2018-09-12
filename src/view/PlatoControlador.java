@@ -16,6 +16,8 @@ public class PlatoControlador {
 	@FXML
 	private Pane panel;
 	
+	@FXML
+	
 	public void initialize() {
 		
 	}

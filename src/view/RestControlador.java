@@ -3,8 +3,10 @@ package view;
 import java.io.IOException;
 
 import control.ClienteControl;
+import control.CompraControl;
 import control.Conexion;
 import entity.Cliente;
+import entity.Compra;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -31,16 +33,6 @@ public class RestControlador {
 	
 	@FXML
 	public void initialize() {
-		ClienteControl c = new ClienteControl(new Conexion());
-		try {
-			Cliente cliente = new Cliente(0);
-			c.search(cliente);
-			
-			System.out.println(cliente.toString());
-		} catch (Throwable e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	@FXML
 	public void validar(ActionEvent event){

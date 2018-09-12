@@ -5,6 +5,8 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.time.ZoneId;
 
+import control.ClienteControl;
+import control.Conexion;
 import entity.Cliente;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -43,6 +45,8 @@ public class ClienteControlador {
 	public void ingresar (ActionEvent event) {		
 		Pane pane;
 		try {
+			newCliente();
+			System.out.println("Cliente registrado+");
 			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmPedidos.fxml"));
 			Scene nuevaEscena = new Scene(pane);
 			Stage ventana = (Stage) panel.getScene().getWindow();
@@ -58,6 +62,16 @@ public class ClienteControlador {
 		int ci = Integer.parseInt(txtCi.getText().toString());
 		int telefono = Integer.parseInt(txtTelefono.getText().toString());
 		Date fechaNacimiento = new java.sql.Date(Date.from(txtFechaNacimiento.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()).getTime());
+		
+		Cliente cliente = new Cliente(nombre,apellido,ci,telefono,fechaNacimiento);
+		ClienteControl control = new ClienteControl(new Conexion());
+		try {
+			control.insert(cliente);
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
 	}
 	
 }

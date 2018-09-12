@@ -2,24 +2,29 @@ package entity;
 
 public class Plato {
 
-	private int idPlata;
-
+	private int idPlato;
+	private int idReceta;
 	private String nombre;
 	private double precio;
-	public Plato(int idPlata, int idCategoria, String nombre, double precio) {
+	public Plato(int idPlato, int idReceta, String nombre, double precio) {
 		super();
-		this.idPlata = idPlata;
-	
+		this.idPlato = idPlato;
+		this.idReceta = idReceta;
 		this.nombre = nombre;
 		this.precio = precio;
 	}
-	public int getIdPlata() {
-		return idPlata;
+	public int getIdPlato() {
+		return idPlato;
 	}
-	public void setIdPlata(int idPlata) {
-		this.idPlata = idPlata;
+	public void setIdPlato(int idPlato) {
+		this.idPlato = idPlato;
 	}
-
+	public int getIdReceta() {
+		return idReceta;
+	}
+	public void setIdReceta(int idReceta) {
+		this.idReceta = idReceta;
+	}
 	public String getNombre() {
 		return nombre;
 	}
@@ -34,8 +39,8 @@ public class Plato {
 	}
 	@Override
 	public String toString() {
-		return "Plato [idPlata=" + idPlata + ", idCategoria=" + ", nombre=" + nombre + ", precio="
-				+ precio + "]";
+		return "Plato [idPlato=" + idPlato + ", idReceta=" + idReceta + ", nombre=" + nombre + ", precio=" + precio
+				+ "]";
 	}
 	
 	

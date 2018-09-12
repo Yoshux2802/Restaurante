@@ -15,7 +15,7 @@ public class PedidosControlador {
 	@FXML
 	private Pane panel;
 	
-	public void pedidos (ActionEvent event) {
+	public void cliente (ActionEvent event) {
 		System.out.println("HOLA");
 		Pane pane;
 		try {
@@ -29,7 +29,7 @@ public class PedidosControlador {
 		}
 	}
 	
-	public void ingresar2 (ActionEvent event) {		
+	public void comida (ActionEvent event) {		
 		Pane pane;
 		try {
 			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmPlato.fxml"));
@@ -41,7 +41,7 @@ public class PedidosControlador {
 		}
 	}
 	
-	public void ingresar (ActionEvent event) {		
+	public void proveedor (ActionEvent event) {		
 		Pane pane;
 		try {
 			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmProveedor.fxml"));
@@ -53,6 +53,51 @@ public class PedidosControlador {
 		}
 	}
 	
+	public void insumo (ActionEvent event){
+		
+		Pane pane;
+		try {
+			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmInsumo.fxml"));
+			Scene nuevaEscena = new Scene(pane);
+			Stage ventana = (Stage) panel.getScene().getWindow();
+			ventana.setScene(nuevaEscena);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 	
+	public void compra(ActionEvent event) {
+		
+		Pane pane;
+		try {
+			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmCompra.fxml"));
+			Scene nuevaEscena = new Scene(pane);
+			Stage ventana = (Stage) panel.getScene().getWindow();
+			ventana.setScene(nuevaEscena);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		
+		
+		}
 
+	}
+	
+	public void receta (ActionEvent event){
+		
+		Pane pane;
+		try {
+			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmReceta.fxml"));
+			Scene nuevaEscena = new Scene(pane);
+			Stage ventana = (Stage) panel.getScene().getWindow();
+			ventana.setScene(nuevaEscena);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		
+		
+		}
+	}
 }

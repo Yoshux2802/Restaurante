@@ -24,6 +24,14 @@ public class Cliente {
 		this.idCliente = idCliente;
 	}
 
+	public Cliente(String nombre, String apellido, int ci, int telefono, Date fechaNacimiento) {
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.ci = ci;
+		this.telefono = telefono;
+		this.fechaNaci = fechaNacimiento;
+	}
+
 	public int getIdCliente() {
 		return idCliente;
 	}

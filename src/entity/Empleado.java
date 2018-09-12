@@ -1,13 +1,15 @@
 package entity;
 
+import java.sql.Date;
+
 public class Empleado {
 	
 	private int idEmpleado;
 	private String nombre;
 	private String apellido;
 	private int telefono;
-	private int fechaNaci;
-	public Empleado(int idEmpleado, String nombre, String apellido, int telefono, int fechaNaci) {
+	private Date fechaNaci;
+	public Empleado(int idEmpleado, String nombre, String apellido, int telefono, Date fechaNaci) {
 		super();
 		this.idEmpleado = idEmpleado;
 		this.nombre = nombre;
@@ -39,10 +41,10 @@ public class Empleado {
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
-	public int getFechaNaci() {
+	public Date getFechaNaci() {
 		return fechaNaci;
 	}
-	public void setFechaNaci(int fechaNaci) {
+	public void setFechaNaci(Date fechaNaci) {
 		this.fechaNaci = fechaNaci;
 	}
 	@Override

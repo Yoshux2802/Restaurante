@@ -18,6 +18,6 @@
       <TextField fx:id="txtCi" layoutX="96.0" layoutY="297.0" />
       <TextField fx:id="txtTelefono" layoutX="96.0" layoutY="393.0" />
       <DatePicker fx:id="txtFechaNacimiento" layoutX="84.0" layoutY="480.0" />
-      <Button fx:id="ingresar" layoutX="453.0" layoutY="480.0" mnemonicParsing="false" text="ingresar" />
+      <Button fx:id="ingresar" layoutX="453.0" layoutY="480.0" mnemonicParsing="false" onAction="#ingresar" text="ingresar" />
    </children>
 </AnchorPane>

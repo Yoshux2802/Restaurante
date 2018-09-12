@@ -2,36 +2,28 @@ package entity;
 
 public class Receta {
 
-	private int idPlato;
-	private int idInsumo;
-	private int cantidad;
-	public Receta(int idPlato, int idInsumo, int cantidad) {
+	private int idReceta;
+	private String descripccion;
+	public Receta(int idReceta, String descripccion) {
 		super();
-		this.idPlato = idPlato;
-		this.idInsumo = idInsumo;
-		this.cantidad = cantidad;
+		this.idReceta = idReceta;
+		this.descripccion = descripccion;
 	}
-	public int getIdPlato() {
-		return idPlato;
+	public int getIdReceta() {
+		return idReceta;
 	}
-	public void setIdPlato(int idPlato) {
-		this.idPlato = idPlato;
+	public void setIdReceta(int idReceta) {
+		this.idReceta = idReceta;
 	}
-	public int getIdInsumo() {
-		return idInsumo;
+	public String getDescripccion() {
+		return descripccion;
 	}
-	public void setIdInsumo(int idInsumo) {
-		this.idInsumo = idInsumo;
-	}
-	public int getCantidad() {
-		return cantidad;
-	}
-	public void setCantidad(int cantidad) {
-		this.cantidad = cantidad;
+	public void setDescripccion(String descripccion) {
+		this.descripccion = descripccion;
 	}
 	@Override
 	public String toString() {
-		return "Receta [idPlato=" + idPlato + ", idInsumo=" + idInsumo + ", cantidad=" + cantidad + "]";
+		return "Receta [idReceta=" + idReceta + ", descripccion=" + descripccion + "]";
 	}
 	
 	

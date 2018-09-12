@@ -3,7 +3,6 @@ package control;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-
 import entity.Cliente;
 
 public class ClienteControl implements Control<Cliente> {
@@ -93,13 +92,6 @@ public class ClienteControl implements Control<Cliente> {
 			conexion.preparedStatement().setDate(5,fechaNaci);
 			conexion.preparedStatement().setInt(6, idCliente);
 			conexion.CUD();
-			
-			
-			
-			
-			
-			
-			
 		}
 		
 	}

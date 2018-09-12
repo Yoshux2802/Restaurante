@@ -1,26 +1,34 @@
 package entity;
 
+import java.sql.Date;
+
 public class Compra {
 
 	private int idCompra;
-	private int fecha;
+	private Date fecha;
 	private int idProveedor;
-	public Compra(int idCompra, int fecha, int idProveedor) {
+	public Compra(int idCompra, Date fecha, int idProveedor) {
 		super();
 		this.idCompra = idCompra;
 		this.fecha = fecha;
 		this.idProveedor = idProveedor;
 	}
+	
+	public Compra(int idCompra) {
+		super();
+		this.idCompra = idCompra;
+	}
+
 	public int getIdCompra() {
 		return idCompra;
 	}
 	public void setIdCompra(int idCompra) {
 		this.idCompra = idCompra;
 	}
-	public int getFecha() {
+	public Date getFecha() {
 		return fecha;
 	}
-	public void setFecha(int fecha) {
+	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
 	public int getIdProveedor() {

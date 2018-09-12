@@ -6,11 +6,20 @@ public class Proveedor {
 	private String nombre;
 	private int telefono;
 	public Proveedor(int idProveedor, String nombre, int telefono) {
-		super();
+		
 		this.idProveedor = idProveedor;
 		this.nombre = nombre;
 		this.telefono = telefono;
 	}
+	
+
+	public Proveedor(String nombre, int telefono) {
+		
+		this.nombre = nombre;
+		this.telefono = telefono;
+	}
+
+
 	public int getIdProveedor() {
 		return idProveedor;
 	}

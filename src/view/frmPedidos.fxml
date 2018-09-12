@@ -5,8 +5,11 @@
 
 <AnchorPane fx:id="panel" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PedidosControlador">
    <children>
-      <Button layoutX="74.0" layoutY="100.0" mnemonicParsing="false" onAction="#pedidos" prefHeight="122.0" prefWidth="151.0" text="Clientes" />
-      <Button layoutX="303.0" layoutY="116.0" mnemonicParsing="false" onAction="#ingresar2" prefHeight="100.0" prefWidth="151.0" text="Comida" />
-      <Button layoutX="521.0" layoutY="116.0" mnemonicParsing="false" onAction="#ingresar" prefHeight="91.0" prefWidth="151.0" text="Proveedor" />
+      <Button layoutX="68.0" layoutY="55.0" mnemonicParsing="false" onAction="#cliente" prefHeight="122.0" prefWidth="151.0" text="Clientes" />
+      <Button layoutX="282.0" layoutY="66.0" mnemonicParsing="false" onAction="#comida" prefHeight="100.0" prefWidth="151.0" text="Comida" />
+      <Button layoutX="481.0" layoutY="71.0" mnemonicParsing="false" onAction="#proveedor" prefHeight="91.0" prefWidth="151.0" text="Proveedor" />
+      <Button layoutX="79.0" layoutY="227.0" mnemonicParsing="false" onAction="#insumo" prefHeight="100.0" prefWidth="129.0" text="Insumo" />
+      <Button layoutX="271.0" layoutY="232.0" mnemonicParsing="false" onAction="#compra" prefHeight="91.0" prefWidth="158.0" text="Compra" />
+      <Button layoutX="481.0" layoutY="227.0" mnemonicParsing="false" onAction="#receta" prefHeight="91.0" prefWidth="136.0" text="Receta" />
    </children>
 </AnchorPane>
