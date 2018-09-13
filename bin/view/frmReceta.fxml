@@ -9,7 +9,7 @@
 
 <AnchorPane fx:id="panel" prefHeight="300.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RecetaControlador">
    <children>
-      <Button fx:id="btnIngresar" layoutX="172.0" layoutY="239.0" mnemonicParsing="false" onAction="#anadir" text="ingresar" />
+      <Button fx:id="btnIngresar" layoutX="172.0" layoutY="239.0" mnemonicParsing="false" onAction="#ingresar" text="ingresar" />
       <ComboBox fx:id="cb_Insumo" layoutX="39.0" layoutY="49.0" prefWidth="150.0" />
       <TextField fx:id="txtCantidad" layoutX="231.0" layoutY="49.0" />
       <Label layoutX="94.0" layoutY="23.0" text="Insumo" />

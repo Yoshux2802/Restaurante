@@ -24,7 +24,7 @@ public class InsumoControl implements Control<Insumo> {
 		while (rs.next()) {
 			int idInsumo = rs.getInt("idInsumo");
 			String nombre = rs.getString("nombre");
-			int precio = rs.getInt("precio");
+			double precio = rs.getInt("precio");
 
 			listaInsumo.add(new Insumo(idInsumo, nombre, precio));
 		}
@@ -35,7 +35,7 @@ public class InsumoControl implements Control<Insumo> {
 	public void insert(Insumo insumo) throws Throwable {
 		conexion.SQL("INSERT INTO INSUMO(nombre, precio) VALUES(?, ?)");
 		conexion.preparedStatement().setString(1, insumo.getNombre());
-		conexion.preparedStatement().setInt(2, insumo.getPrecio());
+		conexion.preparedStatement().setDouble(2, insumo.getPrecio());
 		conexion.CUD();
 	}
 
@@ -61,7 +61,7 @@ public class InsumoControl implements Control<Insumo> {
 			
 			conexion.SQL("UPDATE INSUMO SET nombre = ?, precio = ? WHERE idInsumo = ?");
 			conexion.preparedStatement().setString(1, insumo.getNombre());
-			conexion.preparedStatement().setInt(2, insumo.getPrecio());
+			conexion.preparedStatement().setDouble(2, insumo.getPrecio());
 			conexion.preparedStatement().setInt(3, idInsumo);
 			conexion.CUD();
 		}

@@ -21,7 +21,34 @@ public class PlatoControlador {
 	public void initialize() {
 		
 	}
-	public void ingresar (ActionEvent event) {		
+	public void nuevo (ActionEvent event) {		
+		Pane pane;
+		try {
+			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmComida.fxml"));
+			Scene nuevaEscena = new Scene(pane);
+			Stage ventana = (Stage) panel.getScene().getWindow();
+			ventana.setScene(nuevaEscena);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void venta () {
+		
+		Pane pane;
+		try {
+			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmVenta.fxml"));
+			Scene nuevaEscena = new Scene(pane);
+			Stage ventana = (Stage) panel.getScene().getWindow();
+			ventana.setScene(nuevaEscena);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+	public void atras (ActionEvent event) {		
 		Pane pane;
 		try {
 			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmPedidos.fxml"));
@@ -31,12 +58,6 @@ public class PlatoControlador {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
-
-	public void newPlato () {
-		
-		
-		
-	}
 	
+	}
 }

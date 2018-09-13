@@ -2,7 +2,6 @@ package view;
 
 import java.io.IOException;
 import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.time.ZoneId;
 
 import control.ClienteControl;

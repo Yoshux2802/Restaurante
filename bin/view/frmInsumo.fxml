@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane fx:id="panel" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.InsumoControlador">
+   <children>
+      <Label layoutX="67.0" layoutY="47.0" text="nombre" />
+      <Label layoutX="67.0" layoutY="142.0" text="precio" />
+      <TextField fx:id="txtNombre" layoutX="67.0" layoutY="83.0" />
+      <TextField fx:id="txtPrecio" layoutX="67.0" layoutY="196.0" />
+      <Button layoutX="280.0" layoutY="83.0" mnemonicParsing="false" onAction="#atras" text="atras" />
+      <Button layoutX="280.0" layoutY="196.0" mnemonicParsing="false" onAction="#ingresar" text="ingresar" />
+   </children>
 </AnchorPane>
-

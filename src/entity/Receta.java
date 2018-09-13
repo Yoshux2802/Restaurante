@@ -3,17 +3,17 @@ package entity;
 public class Receta {
 
 	private int idReceta;
-	private String descripccion;
+	private String descripcion;
 	public Receta(int idReceta, String descripccion) {
 		super();
 		this.idReceta = idReceta;
-		this.descripccion = descripccion;
+		this.descripcion = descripcion;
 	}
 	
 	
-	public Receta(String descripccion) {
+	public Receta(String descripcion) {
 		super();
-		this.descripccion = descripccion;
+		this.descripcion = descripcion;
 	}
 
 
@@ -23,15 +23,15 @@ public class Receta {
 	public void setIdReceta(int idReceta) {
 		this.idReceta = idReceta;
 	}
-	public String getDescripccion() {
-		return descripccion;
+	public String getDescripcion() {
+		return descripcion;
 	}
-	public void setDescripccion(String descripccion) {
-		this.descripccion = descripccion;
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 	@Override
 	public String toString() {
-		return "Receta [idReceta=" + idReceta + ", descripccion=" + descripccion + "]";
+		return "Receta [idReceta=" + idReceta + ", descripccion=" + descripcion + "]";
 	}
 	
 	

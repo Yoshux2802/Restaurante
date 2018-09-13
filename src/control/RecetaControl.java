@@ -23,17 +23,17 @@ public class RecetaControl implements Control<Receta> {
 
 		while (rs.next()) {
 			int idReceta = rs.getInt("idReceta");
-			String descripccion = rs.getString("descripccion");
+			String descripcion = rs.getString("descripcion");
 
-			listaReceta.add(new Receta(idReceta, descripccion));
+			listaReceta.add(new Receta(idReceta, descripcion));
 		}
 
 		return listaReceta;
 	}
 
 	public void insert(Receta receta) throws Throwable {
-		conexion.SQL("INSERT INTO RECETA(descripccion) VALUES(?)");
-		conexion.preparedStatement().setString(1, receta.getDescripccion());
+		conexion.SQL("INSERT INTO RECETA(descripcion) VALUES(?)");
+		conexion.preparedStatement().setString(1, receta.getDescripcion());
 		conexion.CUD();
 	}
 
@@ -46,7 +46,7 @@ public class RecetaControl implements Control<Receta> {
 		rs = conexion.resultSet();
 
 		while (rs.next()) {
-			receta.setDescripccion(rs.getString("descripccion"));
+			receta.setDescripcion(rs.getString("descripcion"));
 		}
 
 		rs.close();
@@ -56,8 +56,8 @@ public class RecetaControl implements Control<Receta> {
 		if(receta != null) {
 			int idReceta = receta.getIdReceta();
 
-			conexion.SQL("UPDATE RECETA SET descripccion = ? WHERE idReceta = ?");
-			conexion.preparedStatement().setString(1, receta.getDescripccion());
+			conexion.SQL("UPDATE RECETA SET descripcion = ? WHERE idReceta = ?");
+			conexion.preparedStatement().setString(1, receta.getDescripcion());
 			conexion.preparedStatement().setInt(2, idReceta);
 			conexion.CUD();
 		}
