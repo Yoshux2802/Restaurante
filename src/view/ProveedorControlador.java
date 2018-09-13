@@ -15,43 +15,43 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class ProveedorControlador {
-	
-	
+
+
 	@FXML
 	private Pane panel;
-	
+
 	@FXML
 	private TextField txtNombre;
-	
+
 	@FXML
 	private TextField txtTelefono;
-	
+
 	public Proveedor proveedor;
-	
-	
+
+
 	public void initialize() {
-		
+
 	}
-	
+
 	public void ingresar (ActionEvent event) {		
 		Pane pane;
 		//try {
-			newProveedor();
-			System.out.println("Proveedor registrado");
-			/*pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmPedidos.fxml"));
+		newProveedor();
+		System.out.println("Proveedor registrado");
+		/*pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmPedidos.fxml"));
 			Scene nuevaEscena = new Scene(pane);
 			Stage ventana = (Stage) panel.getScene().getWindow();
 			ventana.setScene(nuevaEscena);*/
 		//} catch (IOException e) {
-			//e.printStackTrace();
+		//e.printStackTrace();
 		//}
 	}
-	
+
 	public void newProveedor () {
-		
+
 		String nombre = txtNombre.getText().toString();
 		int telefono = Integer.parseInt(txtTelefono.getText().toString());	
-		
+
 		proveedor = new Proveedor(nombre,telefono);
 		ProveedorControl  proveedorControl = new ProveedorControl(new Conexion());
 		try {
@@ -60,7 +60,21 @@ public class ProveedorControlador {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
+	public void atras (ActionEvent event) {
+
+		Pane pane;
+		try {
+			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmPedidos.fxml"));
+			Scene nuevaEscena = new Scene(pane);
+			Stage ventana = (Stage) panel.getScene().getWindow();
+			ventana.setScene(nuevaEscena);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 }

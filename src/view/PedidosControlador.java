@@ -53,11 +53,11 @@ public class PedidosControlador {
 		}
 	}
 	
-	public void insumo (ActionEvent event){
+	public void receta (ActionEvent event){
 		
 		Pane pane;
 		try {
-			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmInsumo.fxml"));
+			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmReceta.fxml"));
 			Scene nuevaEscena = new Scene(pane);
 			Stage ventana = (Stage) panel.getScene().getWindow();
 			ventana.setScene(nuevaEscena);
@@ -79,25 +79,6 @@ public class PedidosControlador {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		
-		
-		}
-
-	}
-	
-	public void receta (ActionEvent event){
-		
-		Pane pane;
-		try {
-			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmReceta.fxml"));
-			Scene nuevaEscena = new Scene(pane);
-			Stage ventana = (Stage) panel.getScene().getWindow();
-			ventana.setScene(nuevaEscena);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		
-		
 		}
 	}
 }

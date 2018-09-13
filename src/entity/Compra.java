@@ -14,10 +14,13 @@ public class Compra {
 		this.idProveedor = idProveedor;
 	}
 	
-	public Compra(int idCompra) {
+	
+	public Compra(Date fecha, int idProveedor) {
 		super();
-		this.idCompra = idCompra;
+		this.fecha = fecha;
+		this.idProveedor = idProveedor;
 	}
+
 
 	public int getIdCompra() {
 		return idCompra;

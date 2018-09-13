@@ -1,7 +1,7 @@
 package entity;
 
 public class Venta {
-	
+
 	private int idVenta;
 	private int idCliente;
 	private int idEmpleado;
@@ -13,6 +13,12 @@ public class Venta {
 		this.idEmpleado = idEmpleado;
 		this.numeroVenta = numeroVenta;
 	}
+
+	public Venta(int numeroVenta) {
+		super();
+		this.numeroVenta = numeroVenta;
+	}
+
 	public int getIdVenta() {
 		return idVenta;
 	}
@@ -42,7 +48,7 @@ public class Venta {
 		return "Venta [idVenta=" + idVenta + ", idCliente=" + idCliente + ", idEmpleado=" + idEmpleado
 				+ ", numeroVenta=" + numeroVenta + "]";
 	}
-	
-	
+
+
 
 }

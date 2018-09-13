@@ -13,6 +13,10 @@ public class RecetaInsumo {
 		this.idInsumo = idInsumo;
 		this.cantidad = cantidad;
 	}
+	public RecetaInsumo(int idInsumo, int cantidad) {
+		
+		this.cantidad = cantidad;
+	}
 	public int getIdRecetaInsumo() {
 		return idRecetaInsumo;
 	}

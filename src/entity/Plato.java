@@ -13,6 +13,13 @@ public class Plato {
 		this.nombre = nombre;
 		this.precio = precio;
 	}
+	public Plato(String nombre, double precio) {
+		super();
+		this.nombre = nombre;
+		this.precio = precio;
+	}
+
+
 	public int getIdPlato() {
 		return idPlato;
 	}

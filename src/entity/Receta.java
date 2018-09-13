@@ -9,6 +9,14 @@ public class Receta {
 		this.idReceta = idReceta;
 		this.descripccion = descripccion;
 	}
+	
+	
+	public Receta(String descripccion) {
+		super();
+		this.descripccion = descripccion;
+	}
+
+
 	public int getIdReceta() {
 		return idReceta;
 	}

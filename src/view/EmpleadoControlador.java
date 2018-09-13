@@ -2,52 +2,58 @@ package view;
 
 import java.io.IOException;
 import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.time.ZoneId;
+import java.util.ArrayList;
 
-import control.ClienteControl;
 import control.Conexion;
-import entity.Cliente;
+import control.EmpleadoControl;
+import entity.Empleado;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class ClienteControlador {
-
+public class EmpleadoControlador {
+	
 	@FXML
 	private Pane panel;
-
 	@FXML
 	private TextField txtNombre;
-
 	@FXML
 	private TextField txtApellido;
-
-	@FXML
-	private TextField txtCi;
-
 	@FXML
 	private TextField txtTelefono;
-
 	@FXML
-	private DatePicker txtFechaNacimiento;
-
+	private DatePicker dtFecha;
+	@FXML
+	private TextField txtContrasena;
+	@FXML
+	private Label lbId;
+	
 	public void initialize() {
-
+		EmpleadoControl control = new EmpleadoControl(new Conexion());
+		try {
+			ArrayList<Empleado> empleados = control.list();
+			int cantidad = empleados.size() + 1;
+			System.out.println(cantidad);
+			lbId.setText(cantidad + "");
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-
 	public void ingresar (ActionEvent event) {		
 		Pane pane;
 		try {
-			newCliente();
-			System.out.println("Cliente registrado+");
-			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("frmPedidos.fxml"));
+			newEmpleado();
+			System.out.println("Empleado registrado+");
+			pane = (AnchorPane)FXMLLoader.load(getClass().getResource("App.fxml"));
 			Scene nuevaEscena = new Scene(pane);
 			Stage ventana = (Stage) panel.getScene().getWindow();
 			ventana.setScene(nuevaEscena);
@@ -56,22 +62,21 @@ public class ClienteControlador {
 		}
 	}
 
-	public void newCliente () {
+	public void newEmpleado () {
 		String nombre = txtNombre.getText().toString();
 		String apellido = txtApellido.getText().toString();
-		int ci = Integer.parseInt(txtCi.getText().toString());
 		int telefono = Integer.parseInt(txtTelefono.getText().toString());
-		Date fechaNacimiento = new java.sql.Date(Date.from(txtFechaNacimiento.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()).getTime());
-
-		Cliente cliente = new Cliente(nombre,apellido,ci,telefono,fechaNacimiento);
-		ClienteControl control = new ClienteControl(new Conexion());
+		Date fecha = new java.sql.Date(Date.from(dtFecha.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()).getTime());
+		String contrasena = txtContrasena.getText().toString();
+		Empleado empleado = new Empleado(nombre,apellido,telefono,fecha,contrasena);
+		EmpleadoControl control = new EmpleadoControl(new Conexion());
 		try {
-			control.insert(cliente);
+			ArrayList<Empleado> empleados = control.list();
+			control.insert(empleado);
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 
 	public void atras(ActionEvent event) {
@@ -87,5 +92,6 @@ public class ClienteControlador {
 		}
 
 	}
+
 
 }

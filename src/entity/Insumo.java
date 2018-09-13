@@ -11,6 +11,13 @@ public class Insumo {
 		this.nombre = nombre;
 		this.precio = precio;
 	}
+
+	public Insumo(String nombre, int precio) {
+		super();
+		this.nombre = nombre;
+		this.precio = precio;
+	}
+
 	public int getIdInsumo() {
 		return IdInsumo;
 	}

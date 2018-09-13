@@ -13,6 +13,15 @@ public class Factura {
 		this.fecha = fecha;
 		this.precioTot = precioTot;
 	}
+	
+	
+	public Factura(Date fecha, double precioTot) {
+		super();
+		this.fecha = fecha;
+		this.precioTot = precioTot;
+	}
+
+
 	public int getIdVenta() {
 		return idVenta;
 	}

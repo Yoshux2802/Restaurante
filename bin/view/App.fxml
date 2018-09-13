@@ -7,10 +7,11 @@
 
 <AnchorPane fx:id="panel" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RestControlador">
    <children>
-      <Button fx:id="botonValidar" layoutX="174.0" layoutY="276.0" mnemonicParsing="false" onAction="#validar" text="Validar" />
+      <Button fx:id="botonValidar" layoutX="126.0" layoutY="278.0" mnemonicParsing="false" onAction="#validar" text="Validar" />
       <TextField fx:id="txtUsuario" layoutX="126.0" layoutY="77.0" />
       <TextField fx:id="txtContrasena" layoutX="126.0" layoutY="200.0" />
       <Label layoutX="180.0" layoutY="35.0" text="Usuario" />
       <Label layoutX="170.0" layoutY="142.0" text="Contraseña" />
+      <Button fx:id="btnNuevo" layoutX="249.0" layoutY="278.0" mnemonicParsing="false" onAction="#nuevo" text="nuevo" />
    </children>
 </AnchorPane>

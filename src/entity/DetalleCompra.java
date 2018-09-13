@@ -6,11 +6,19 @@ public class DetalleCompra {
 	private int idCompra;
 	private int cantidad;
 	public DetalleCompra(int idInsumo, int idCompra, int cantidad) {
-		super();
+	
 		this.idInsumo = idInsumo;
 		this.idCompra = idCompra;
 		this.cantidad = cantidad;
 	}
+	
+
+	public DetalleCompra(int idCompra, int cantidad) {
+		
+		this.cantidad = cantidad;
+	}
+
+
 	public int getIdInsumo() {
 		return idInsumo;
 	}

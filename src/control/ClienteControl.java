@@ -26,11 +26,12 @@ public class ClienteControl implements Control<Cliente> {
 			
 			int idCliente = rs.getInt("idCliente");
 			String nombre = rs.getString("nombre");
+			String apellido = rs.getString("apellido");
 			int ci = rs.getInt("ci");
 			int telefono = rs.getInt("telefono");
 			Date fechaNaci = rs.getDate("fechaNaci");
 			
-			Cliente cliente = new Cliente (idCliente,nombre,"",ci,telefono,fechaNaci);
+			Cliente cliente = new Cliente (idCliente,nombre,apellido,ci,telefono,fechaNaci);
 			clientes.add(cliente);
 		}
 			

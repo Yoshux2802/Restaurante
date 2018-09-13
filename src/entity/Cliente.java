@@ -19,10 +19,6 @@ public class Cliente {
 		this.telefono = telefono;
 		this.fechaNaci = fechaNaci;
 	}
-	
-	public Cliente(int idCliente) {
-		this.idCliente = idCliente;
-	}
 
 	public Cliente(String nombre, String apellido, int ci, int telefono, Date fechaNacimiento) {
 		this.nombre = nombre;

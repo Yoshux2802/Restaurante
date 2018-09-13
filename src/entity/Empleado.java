@@ -9,13 +9,23 @@ public class Empleado {
 	private String apellido;
 	private int telefono;
 	private Date fechaNaci;
-	public Empleado(int idEmpleado, String nombre, String apellido, int telefono, Date fechaNaci) {
+	private String contrasena;
+	public Empleado(int idEmpleado, String nombre, String apellido, int telefono, Date fechaNaci, String contrasena) {
 		super();
 		this.idEmpleado = idEmpleado;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.telefono = telefono;
 		this.fechaNaci = fechaNaci;
+		this.contrasena = contrasena;
+	}
+	public Empleado(String nombre, String apellido, int telefono, Date fechaNaci, String contrasena) {
+		super();
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.telefono = telefono;
+		this.fechaNaci = fechaNaci;
+		this.contrasena = contrasena;
 	}
 	public int getIdEmpleado() {
 		return idEmpleado;
@@ -47,12 +57,17 @@ public class Empleado {
 	public void setFechaNaci(Date fechaNaci) {
 		this.fechaNaci = fechaNaci;
 	}
+	public String getContrasena() {
+		return contrasena;
+	}
+	public void setContrasena(String contrasena) {
+		this.contrasena = contrasena;
+	}
 	@Override
 	public String toString() {
 		return "Empleado [idEmpleado=" + idEmpleado + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono="
-				+ telefono + ", fechaNaci=" + fechaNaci + "]";
+				+ telefono + ", fechaNaci=" + fechaNaci + ", contrasena=" + contrasena + "]";
 	}
 	
 	
-
-}
+}	
