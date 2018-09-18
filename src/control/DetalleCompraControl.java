@@ -33,9 +33,10 @@ public class DetalleCompraControl implements Control<DetalleCompra> {
 	}
 
 	public void insert(DetalleCompra detallecompra) throws Throwable {
-		conexion.SQL("INSERT INTO DETALLECOMPRA(idCompra, cantidad) VALUES(?, ?)");
-		conexion.preparedStatement().setInt(1, detallecompra.getIdCompra());
-		conexion.preparedStatement().setInt(2, detallecompra.getCantidad());
+		conexion.SQL("INSERT INTO DETALLECOMPRA(idInsumo, idCompra, cantidad) VALUES(?, ?, ?)");
+		conexion.preparedStatement().setInt(1, detallecompra.getIdInsumo());
+		conexion.preparedStatement().setInt(2, detallecompra.getIdCompra());
+		conexion.preparedStatement().setInt(3, detallecompra.getCantidad());
 		conexion.CUD();
 	}
 
@@ -43,11 +44,12 @@ public class DetalleCompraControl implements Control<DetalleCompra> {
 		ResultSet rs;
 
 		conexion.SQL("SELECT * FROM DETALLECOMPRA WHERE idInsumo=?");
-		conexion.preparedStatement().setInt(1, detallecompra.getIdInsumo());
+		conexion.preparedStatement().setInt(1, detallecompra.getIdDetalleCompra());
 
 		rs = conexion.resultSet();
 
 		while (rs.next()) {
+			detallecompra.setIdInsumo(rs.getInt("idInsumo"));
 			detallecompra.setIdCompra(rs.getInt("idCompra"));
 			detallecompra.setCantidad(rs.getInt("cantidad"));
 		}
@@ -59,10 +61,11 @@ public class DetalleCompraControl implements Control<DetalleCompra> {
 		if(detallecompra != null) {
 			int idInsumo = detallecompra.getIdInsumo();
 
-			conexion.SQL("UPDATE DETALLECOMPRA SET idCompra = ?, cantidad = ? WHERE idInsumo = ?");
-			conexion.preparedStatement().setInt(1, detallecompra.getIdCompra());
-			conexion.preparedStatement().setInt(2, detallecompra.getCantidad());
-			conexion.preparedStatement().setInt(3, idInsumo);
+			conexion.SQL("UPDATE DETALLECOMPRA SET idInsumo = ?, idCompra = ?, cantidad = ? WHERE idDetalleCompra = ?");
+			conexion.preparedStatement().setInt(1, detallecompra.getIdInsumo());
+			conexion.preparedStatement().setInt(2, detallecompra.getIdCompra());
+			conexion.preparedStatement().setInt(3, detallecompra.getCantidad());
+			conexion.preparedStatement().setInt(4, idInsumo);
 			conexion.CUD();
 		}
 	}

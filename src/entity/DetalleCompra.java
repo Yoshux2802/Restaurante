@@ -1,24 +1,32 @@
 package entity;
 
 public class DetalleCompra {
-
+	
+	private int idDetalleCompra;
 	private int idInsumo;
 	private int idCompra;
 	private int cantidad;
-	public DetalleCompra(int idInsumo, int idCompra, int cantidad) {
-	
+	public DetalleCompra(int idDetalleCompra, int idInsumo, int idCompra, int cantidad) {
+		super();
+		this.idDetalleCompra = idDetalleCompra;
 		this.idInsumo = idInsumo;
 		this.idCompra = idCompra;
 		this.cantidad = cantidad;
 	}
 	
-
-	public DetalleCompra(int idCompra, int cantidad) {
-		
+	public DetalleCompra(int idInsumo, int idCompra, int cantidad) {
+		super();
+		this.idInsumo = idInsumo;
+		this.idCompra = idCompra;
 		this.cantidad = cantidad;
 	}
 
-
+	public int getIdDetalleCompra() {
+		return idDetalleCompra;
+	}
+	public void setIdDetalleCompra(int idDetalleCompra) {
+		this.idDetalleCompra = idDetalleCompra;
+	}
 	public int getIdInsumo() {
 		return idInsumo;
 	}
@@ -39,8 +47,11 @@ public class DetalleCompra {
 	}
 	@Override
 	public String toString() {
-		return "DetalleCompra [idInsumo=" + idInsumo + ", idCompra=" + idCompra + ", cantidad=" + cantidad + "]";
+		return "DetalleCompra [idDetalleCompra=" + idDetalleCompra + ", idInsumo=" + idInsumo + ", idCompra=" + idCompra
+				+ ", cantidad=" + cantidad + "]";
 	}
+	
+	
 	
 	
 }

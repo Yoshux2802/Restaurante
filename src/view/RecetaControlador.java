@@ -101,7 +101,7 @@ public class RecetaControlador {
 
 		lbReceta.setText("");
 		for(int i = 0; i < insumo.size(); i++) {
-			lbReceta.setText(lbReceta.getText().toString() + "\n" + cantidad.get(i).toString() + " " + insumo.get(i).toString());
+			lbReceta.setText(lbReceta.getText().toString() + " " + cantidad.get(i).toString() + " " + insumo.get(i).toString());
 		}
 	}
 

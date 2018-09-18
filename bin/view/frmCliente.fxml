@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
 <AnchorPane fx:id="panel" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ClienteControlador">
    <children>
@@ -18,7 +19,8 @@
       <TextField fx:id="txtCi" layoutX="96.0" layoutY="297.0" />
       <TextField fx:id="txtTelefono" layoutX="96.0" layoutY="393.0" />
       <DatePicker fx:id="txtFechaNacimiento" layoutX="84.0" layoutY="480.0" />
-      <Button fx:id="ingresar" layoutX="453.0" layoutY="480.0" mnemonicParsing="false" onAction="#ingresar" text="ingresar" />
-      <Button fx:id="btnAtras" layoutX="457.0" layoutY="285.0" mnemonicParsing="false" onAction="#atras" text="Atras" />
+      <Button fx:id="ingresar" layoutX="186.0" layoutY="547.0" mnemonicParsing="false" onAction="#ingresar" text="ingresar" />
+      <Button fx:id="btnAtras" layoutX="95.0" layoutY="547.0" mnemonicParsing="false" onAction="#atras" text="Atras" />
+      <Pane id="pane" layoutX="325.0" layoutY="4.0" prefHeight="642.0" prefWidth="374.0" stylesheets="@application.css" />
    </children>
 </AnchorPane>

@@ -19,7 +19,14 @@ public class Plato {
 		this.precio = precio;
 	}
 
+	
 
+	public Plato(int idReceta, String nombre, double precio) {
+		super();
+		this.idReceta = idReceta;
+		this.nombre = nombre;
+		this.precio = precio;
+	}
 	public int getIdPlato() {
 		return idPlato;
 	}

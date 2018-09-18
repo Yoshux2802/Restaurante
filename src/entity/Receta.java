@@ -7,7 +7,7 @@ public class Receta {
 	public Receta(int idReceta, String descripccion) {
 		super();
 		this.idReceta = idReceta;
-		this.descripcion = descripcion;
+		this.descripcion = descripccion;
 	}
 	
 	

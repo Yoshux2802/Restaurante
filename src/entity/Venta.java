@@ -13,6 +13,17 @@ public class Venta {
 		this.idEmpleado = idEmpleado;
 		this.numeroVenta = numeroVenta;
 	}
+	
+	
+
+	public Venta(int idCliente, int idEmpleado, int numeroVenta) {
+		super();
+		this.idCliente = idCliente;
+		this.idEmpleado = idEmpleado;
+		this.numeroVenta = numeroVenta;
+	}
+
+
 
 	public Venta(int numeroVenta) {
 		super();

@@ -21,6 +21,17 @@ public class DetalleVenta {
 	}
 
 
+	
+
+
+	public DetalleVenta(int idVenta, int idPlato, int cantidad) {
+		super();
+		this.idVenta = idVenta;
+		this.idPlato = idPlato;
+		this.cantidad = cantidad;
+	}
+
+
 	public int getIdDetalleVenta() {
 		return idDetalleVenta;
 	}
